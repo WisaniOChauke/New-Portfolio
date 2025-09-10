@@ -532,6 +532,40 @@ html:not([data-theme]) .theme-toggle .moon-icon {
     letter-spacing: 0.05em;
 }
 
+/* Education Items */
+.education-item {
+    margin-bottom: 2rem;
+}
+
+.education-item h3 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--text-primary);
+    margin-bottom: 0.5rem;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.education-item h3 i {
+    color: var(--accent-primary);
+    font-size: 1.1rem;
+}
+
+.education-item h4 {
+    font-size: 1rem;
+    font-weight: 500;
+    color: var(--accent-secondary);
+    margin-bottom: 0.75rem;
+}
+
+.education-item p {
+    font-size: 1rem;
+    color: var(--text-secondary);
+    line-height: 1.6;
+    margin-bottom: 0;
+}
+
 /* Contact Section Styles */
 .contact-section {
     padding: 120px 0;
