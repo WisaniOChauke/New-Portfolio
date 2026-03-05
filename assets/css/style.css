@@ -4007,3 +4007,345 @@ a.feature-item span {
     text-transform: uppercase;
     letter-spacing: 0.05em;
 }
+
+
+/* ========================================
+   PREMIUM ABOUT & EDUCATION SECTIONS
+   ======================================== */
+
+/* Premium About Grid */
+.about-grid-premium {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 1.5rem;
+    margin-top: 3rem;
+}
+
+.about-card-premium {
+    position: relative;
+    background: var(--glass-bg);
+    border: 1px solid var(--glass-border);
+    border-radius: 24px;
+    padding: 2.5rem;
+    transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+    overflow: hidden;
+    text-align: center;
+}
+
+.about-card-premium::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, var(--accent-primary), var(--accent-secondary), var(--accent-tertiary));
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.about-card-premium:hover::before {
+    opacity: 1;
+}
+
+.about-card-premium:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 30px 60px rgba(0, 0, 0, 0.2);
+    border-color: var(--accent-primary);
+}
+
+.about-icon-wrapper {
+    width: 80px;
+    height: 80px;
+    background: linear-gradient(135deg, var(--accent-primary), var(--accent-secondary));
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 1.5rem;
+    transition: all 0.3s ease;
+}
+
+.about-icon-wrapper i {
+    font-size: 2.5rem;
+    color: white;
+}
+
+.about-card-premium:hover .about-icon-wrapper {
+    transform: scale(1.1) rotate(5deg);
+    box-shadow: 0 15px 40px rgba(201, 165, 90, 0.5);
+}
+
+.about-card-premium h3 {
+    font-family: var(--font-display);
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--text-primary);
+    margin-bottom: 1rem;
+}
+
+.about-card-premium p {
+    font-size: 1rem;
+    color: var(--text-secondary);
+    line-height: 1.7;
+}
+
+/* Shine effect on about cards */
+.about-card-premium::after {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: linear-gradient(
+        90deg,
+        transparent 0%,
+        transparent 40%,
+        rgba(255, 255, 255, 0.08) 50%,
+        transparent 60%,
+        transparent 100%
+    );
+    transform: translateX(-100%) skewX(-15deg);
+    opacity: 0;
+    pointer-events: none;
+    z-index: 1;
+}
+
+.about-card-premium:hover::after {
+    animation: luxuryShine 4s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+}
+
+/* Scroll reveal for about cards */
+.about-card-premium {
+    opacity: 0;
+    transform: translateY(30px);
+    animation: revealElement 0.8s ease-out forwards;
+}
+
+.about-card-premium:nth-child(1) { animation-delay: 0.1s; }
+.about-card-premium:nth-child(2) { animation-delay: 0.2s; }
+.about-card-premium:nth-child(3) { animation-delay: 0.3s; }
+
+/* Premium Education Grid */
+.education-grid-premium {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 1.5rem;
+    margin-top: 3rem;
+}
+
+.education-card-premium {
+    position: relative;
+    background: var(--glass-bg);
+    border: 1px solid var(--glass-border);
+    border-radius: 24px;
+    padding: 2rem;
+    transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+    overflow: hidden;
+}
+
+.education-card-premium::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, var(--accent-primary), var(--accent-secondary), var(--accent-tertiary));
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.education-card-premium:hover::before {
+    opacity: 1;
+}
+
+.education-card-premium:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 30px 60px rgba(0, 0, 0, 0.2);
+    border-color: var(--accent-primary);
+}
+
+.education-number {
+    position: absolute;
+    top: 1.25rem;
+    right: 1.25rem;
+    font-size: 2rem;
+    font-weight: 700;
+    font-family: var(--font-display);
+    color: rgba(201, 165, 90, 0.12);
+    line-height: 1;
+    z-index: 1;
+}
+
+[data-theme="light"] .education-number {
+    color: rgba(87, 83, 78, 0.15);
+}
+
+.education-icon-wrapper {
+    width: 70px;
+    height: 70px;
+    background: linear-gradient(135deg, var(--accent-primary), var(--accent-secondary));
+    border-radius: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1.5rem;
+    transition: all 0.3s ease;
+}
+
+.education-icon-wrapper i {
+    font-size: 2rem;
+    color: white;
+}
+
+.education-card-premium:hover .education-icon-wrapper {
+    transform: scale(1.1) rotate(5deg);
+    box-shadow: 0 10px 30px rgba(201, 165, 90, 0.4);
+}
+
+.education-content h3 {
+    font-family: var(--font-display);
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: var(--text-primary);
+    margin-bottom: 0.5rem;
+}
+
+.education-content h4 {
+    font-size: 1rem;
+    font-weight: 500;
+    color: var(--accent-secondary);
+    margin-bottom: 1rem;
+}
+
+.education-content p {
+    font-size: 0.95rem;
+    color: var(--text-secondary);
+    line-height: 1.6;
+    margin-bottom: 1rem;
+}
+
+.education-badge {
+    display: inline-block;
+    padding: 0.35rem 0.85rem;
+    background: linear-gradient(135deg, var(--accent-primary), var(--accent-secondary));
+    color: white;
+    border-radius: 16px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    box-shadow: 0 4px 12px rgba(201, 165, 90, 0.3);
+}
+
+/* Shine effect on education cards */
+.education-card-premium::after {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: linear-gradient(
+        90deg,
+        transparent 0%,
+        transparent 40%,
+        rgba(255, 255, 255, 0.08) 50%,
+        transparent 60%,
+        transparent 100%
+    );
+    transform: translateX(-100%) skewX(-15deg);
+    opacity: 0;
+    pointer-events: none;
+    z-index: 1;
+}
+
+.education-card-premium:hover::after {
+    animation: luxuryShine 4s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+}
+
+/* Scroll reveal for education cards */
+.education-card-premium {
+    opacity: 0;
+    transform: translateY(30px);
+    animation: revealElement 0.8s ease-out forwards;
+}
+
+.education-card-premium:nth-child(1) { animation-delay: 0.1s; }
+.education-card-premium:nth-child(2) { animation-delay: 0.2s; }
+.education-card-premium:nth-child(3) { animation-delay: 0.3s; }
+
+/* Ensure content is above effects */
+.education-card-premium .education-content,
+.education-card-premium .education-icon-wrapper,
+.education-card-premium .education-number,
+.about-card-premium .about-icon-wrapper,
+.about-card-premium h3,
+.about-card-premium p {
+    position: relative;
+    z-index: 2;
+}
+
+/* Responsive About & Education */
+@media (max-width: 768px) {
+    .about-grid-premium,
+    .education-grid-premium {
+        grid-template-columns: 1fr;
+    }
+    
+    .about-card-premium,
+    .education-card-premium {
+        padding: 1.5rem;
+    }
+    
+    .about-icon-wrapper {
+        width: 70px;
+        height: 70px;
+    }
+    
+    .about-icon-wrapper i {
+        font-size: 2rem;
+    }
+    
+    .education-icon-wrapper {
+        width: 60px;
+        height: 60px;
+    }
+    
+    .education-icon-wrapper i {
+        font-size: 1.5rem;
+    }
+}
+
+
+/* Dancing education numbers on hover */
+.education-card-premium:hover .education-number {
+    opacity: 0.25;
+    animation: pulse 3s ease-in-out infinite;
+}
+
+
+/* Move education numbers higher */
+.education-number {
+    top: 0.75rem !important;
+}
+
+
+/* Move education numbers even higher */
+.education-number {
+    top: 0.5rem !important;
+}
+
+
+/* Move education numbers to top edge */
+.education-number {
+    top: 0.25rem !important;
+}
+
+
+/* Move education numbers flush to top */
+.education-number {
+    top: 0 !important;
+}
