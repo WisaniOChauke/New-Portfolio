@@ -63,7 +63,7 @@
         <div class="container">
             <div class="contact-grid">
                 <!-- Contact Information Card -->
-                <div class="contact-info-card">
+                <div class="contact-info-card" id="contact-details">
                     <div class="info-card-header">
                         <div class="info-icon-large">
                             <i class="fas fa-address-book"></i>
@@ -72,7 +72,7 @@
                         <p>Reach out through any of these channels</p>
                     </div>
                     
-                    <div class="contact-details-elegant">
+                    <div class="contact-details-elegant" id="direct-contact">
                         <div class="contact-detail-item">
                             <div class="detail-icon">
                                 <i class="fas fa-envelope"></i>
@@ -88,6 +88,19 @@
                         
                         <div class="contact-detail-item">
                             <div class="detail-icon">
+                                <i class="fas fa-phone"></i>
+                            </div>
+                            <div class="detail-content">
+                                <h4>Phone</h4>
+                                <a href="tel:+27731443746" class="detail-link">
+                                    +27 73 144 3746
+                                </a>
+                                <span class="detail-note">Available Mon-Fri, 9AM-5PM SAST</span>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-detail-item">
+                            <div class="detail-icon">
                                 <i class="fas fa-map-marker-alt"></i>
                             </div>
                             <div class="detail-content">
@@ -96,43 +109,59 @@
                                 <span class="detail-note">South Africa • Available Worldwide</span>
                             </div>
                         </div>
-                        
-                        <div class="contact-detail-item">
-                            <div class="detail-icon">
-                                <i class="fab fa-linkedin"></i>
-                            </div>
-                            <div class="detail-content">
-                                <h4>LinkedIn</h4>
-                                <a href="https://linkedin.com/in/wisani" target="_blank" rel="noopener noreferrer" class="detail-link">
-                                    linkedin.com/in/wisani
-                                </a>
-                                <span class="detail-note">Professional network</span>
-                            </div>
+                    </div>
+
+                    <!-- Social Profiles Section -->
+                    <div class="social-profiles-section" id="social-profiles">
+                        <div class="social-header">
+                            <i class="fas fa-share-alt"></i>
+                            <h3>Social Profiles</h3>
                         </div>
-                        
-                        <div class="contact-detail-item">
-                            <div class="detail-icon">
-                                <i class="fab fa-github"></i>
-                            </div>
-                            <div class="detail-content">
-                                <h4>GitHub</h4>
-                                <a href="https://github.com/okWiser" target="_blank" rel="noopener noreferrer" class="detail-link">
-                                    github.com/okWiser
-                                </a>
-                                <span class="detail-note">View my code & projects</span>
-                            </div>
+                        <p>Connect with me on professional networks</p>
+                        <div class="social-links-elegant">
+                            <a href="https://www.linkedin.com/in/wisani-chauke-b5a5a5305/" target="_blank" rel="noopener noreferrer" class="social-link-card">
+                                <div class="social-icon linkedin">
+                                    <i class="fab fa-linkedin"></i>
+                                </div>
+                                <div class="social-content">
+                                    <h4>LinkedIn</h4>
+                                    <p class="social-url">linkedin.com/in/wisani-chauke</p>
+                                    <span class="social-note">Professional network</span>
+                                </div>
+                                <i class="fas fa-external-link-alt social-arrow"></i>
+                            </a>
+                            <a href="https://github.com/WisaniOChauke" target="_blank" rel="noopener noreferrer" class="social-link-card">
+                                <div class="social-icon github">
+                                    <i class="fab fa-github"></i>
+                                </div>
+                                <div class="social-content">
+                                    <h4>GitHub</h4>
+                                    <p class="social-url">github.com/WisaniOChauke</p>
+                                    <span class="social-note">View my code & projects</span>
+                                </div>
+                                <i class="fas fa-external-link-alt social-arrow"></i>
+                            </a>
                         </div>
                     </div>
 
+                    <!-- Contact Details (LinkedIn & GitHub removed from here) -->
+                    <div class="contact-details-note" style="margin-top: 1.5rem; padding: 1rem; background: var(--card-bg); border-radius: 8px; border-left: 3px solid var(--champagne-gold);">
+                        <p style="margin: 0; font-size: 0.9rem; color: var(--text-secondary);"><i class="fas fa-info-circle" style="margin-right: 0.5rem; color: var(--champagne-gold);"></i>For LinkedIn and GitHub profiles, see the Social Profiles section above</p>
+                    </div>
+
                     <!-- Resume Download Section -->
-                    <div class="resume-section-elegant">
+                    <div class="resume-section-elegant" id="resume-download">
                         <div class="resume-header">
                             <i class="fas fa-file-download"></i>
                             <h3>Download Resume</h3>
                         </div>
-                        <p>Get my complete professional profile</p>
+                        <p>Code-engineered with HTML, CSS & JavaScript</p>
+                        <div class="code-badge">
+                            <i class="fas fa-code"></i>
+                            <span>Built with Code, Not Templates</span>
+                        </div>
                         <div class="resume-options-elegant">
-                            <div class="qr-section">
+                            <div class="qr-section" id="qr-code">
                                 <div class="qr-wrapper">
                                     <img src="assets/images/resume-qr-code.png" alt="Resume QR Code" class="qr-code-elegant">
                                     <div class="qr-overlay">
@@ -142,7 +171,7 @@
                                 <p class="qr-label">Scan with your phone</p>
                             </div>
                             <div class="download-section">
-                                <a href="assets/files/Wisani_Chauke_Resume.pdf" 
+                                <a href="assets/files/Wisani Chauke - CV.pdf" 
                                    download="Wisani_Chauke_Resume.pdf" 
                                    class="download-btn-elegant">
                                     <i class="fas fa-download"></i>
@@ -210,10 +239,10 @@
                     <a href="mailto:wiserowens@gmail.com" title="Email">
                         <i class="fas fa-envelope"></i>
                     </a>
-                    <a href="https://linkedin.com/in/wisani" target="_blank" title="LinkedIn">
+                    <a href="https://www.linkedin.com/in/wisani-chauke-b5a5a5305/" target="_blank" title="LinkedIn">
                         <i class="fab fa-linkedin"></i>
                     </a>
-                    <a href="https://github.com/okWiser" target="_blank" title="GitHub">
+                    <a href="https://github.com/WisaniOChauke" target="_blank" title="GitHub">
                         <i class="fab fa-github"></i>
                     </a>
                 </div>
