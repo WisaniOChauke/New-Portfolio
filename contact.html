@@ -187,7 +187,11 @@
                         <h2>Send a Message</h2>
                         <p>I'll get back to you as soon as possible</p>
                     </div>
-                    <form class="contact-form-elegant" id="contactForm">
+                    <form class="contact-form-elegant" id="contactForm" name="contact-page" method="POST" data-netlify="true" data-netlify-honeypot="bot-field">
+                        <input type="hidden" name="form-name" value="contact-page" />
+                        <p style="display: none;">
+                            <label>Don't fill this out if you're human: <input name="bot-field" /></label>
+                        </p>
                         <div class="form-group-elegant">
                             <label for="name">
                                 <i class="fas fa-user"></i>

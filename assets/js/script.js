@@ -83,52 +83,20 @@ function initScrollAnimations() {
     animatedElements.forEach(el => observer.observe(el));
 }
 
-// Form Handling
+// Form Handling - Netlify Forms
 function initFormHandling() {
-    const contactForm = document.querySelector('.contact-form');
+    const contactForm = document.querySelector('.contact-form, .contact-form-elegant');
     
     if (contactForm) {
         contactForm.addEventListener('submit', (e) => {
-            e.preventDefault();
-            
-            // Get form elements by name or id
-            const nameInput = contactForm.querySelector('input[name="name"], #name');
-            const emailInput = contactForm.querySelector('input[name="email"], #email');
-            const messageInput = contactForm.querySelector('textarea[name="message"], #message');
-            const subjectInput = contactForm.querySelector('input[name="subject"], #subject');
-            
-            // Get values
-            const name = nameInput?.value.trim() || '';
-            const email = emailInput?.value.trim() || '';
-            const message = messageInput?.value.trim() || '';
-            const subject = subjectInput?.value.trim() || '';
-            
-            // Simple validation
-            if (!name || !email || !message) {
-                alert('Please fill in all required fields');
-                return;
-            }
-            
-            // Email validation
-            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-            if (!emailRegex.test(email)) {
-                alert('Please enter a valid email address');
-                return;
-            }
-            
-            // Show loading state
-            const submitBtn = contactForm.querySelector('.submit-btn, button[type="submit"]');
+            // Let Netlify handle the submission
+            const submitBtn = contactForm.querySelector('.submit-btn, .submit-btn-elegant, button[type="submit"]');
             const originalText = submitBtn.innerHTML;
             submitBtn.innerHTML = 'Sending...';
             submitBtn.disabled = true;
             
-            // Simulate form submission
-            setTimeout(() => {
-                alert(`Thank you ${name}! Your message has been received. I will get back to you soon.`);
-                contactForm.reset();
-                submitBtn.innerHTML = originalText;
-                submitBtn.disabled = false;
-            }, 1000);
+            // Form will be submitted by Netlify
+            // Success page or message will be shown automatically
         });
     }
 }
