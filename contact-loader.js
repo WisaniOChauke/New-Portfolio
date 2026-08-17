@@ -99,18 +99,24 @@
                 const message = messageInput?.value?.trim();
                 
                 if (!name || !email || !message) {
-                    alert('Please fill in all fields');
+                    const errorEl = form.querySelector('.form-error') || Object.assign(document.createElement('p'), { className: 'form-error', style: 'color:red;font-size:0.85rem;margin-top:0.5rem' });
+                    errorEl.textContent = 'Please fill in all fields';
+                    form.appendChild(errorEl);
                     return;
                 }
                 
                 const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
                 if (!emailRegex.test(email)) {
-                    alert('Please enter a valid email address');
+                    const errorEl = form.querySelector('.form-error') || Object.assign(document.createElement('p'), { className: 'form-error', style: 'color:red;font-size:0.85rem;margin-top:0.5rem' });
+                    errorEl.textContent = 'Please enter a valid email address';
+                    form.appendChild(errorEl);
                     return;
                 }
                 
-                alert('Thank you for your message! I will get back to you soon.');
+                const successEl = Object.assign(document.createElement('p'), { className: 'form-success', style: 'color:green;font-size:0.85rem;margin-top:0.5rem', textContent: 'Thank you for your message! I will get back to you soon.' });
+                form.appendChild(successEl);
                 form.reset();
+                setTimeout(() => successEl.remove(), 5000);
             });
         });
     }

@@ -187,7 +187,7 @@
                         <h2>Send a Message</h2>
                         <p>I'll get back to you as soon as possible</p>
                     </div>
-                    <form class="contact-form-elegant" id="contactForm" name="contact-page" method="POST" data-netlify="true" data-netlify-honeypot="bot-field">
+                    <form class="contact-form-elegant" id="contactForm" name="contact-page" method="POST" action="/success" data-netlify="true" data-netlify-honeypot="bot-field">
                         <input type="hidden" name="form-name" value="contact-page" />
                         <p style="display: none;">
                             <label>Don't fill this out if you're human: <input name="bot-field" /></label>
@@ -204,7 +204,7 @@
                                 <i class="fas fa-envelope"></i>
                                 Email Address
                             </label>
-                            <input type="email" id="email" name="email" placeholder="john@example.com" required>
+                            <input type="email" id="email" name="email" placeholder="john@example.com" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" title="Please enter a valid email address" required>
                         </div>
                         <div class="form-group-elegant">
                             <label for="subject">
@@ -241,10 +241,10 @@
                     <a href="mailto:wiserowens@gmail.com" title="Email">
                         <i class="fas fa-envelope"></i>
                     </a>
-                    <a href="https://www.linkedin.com/in/wisani-chauke/" target="_blank" title="LinkedIn">
+                    <a href="https://www.linkedin.com/in/wisani-chauke/" target="_blank" rel="noopener noreferrer" title="LinkedIn">
                         <i class="fab fa-linkedin"></i>
                     </a>
-                    <a href="https://github.com/WisaniOChauke" target="_blank" title="GitHub">
+                    <a href="https://github.com/WisaniOChauke" target="_blank" rel="noopener noreferrer" title="GitHub">
                         <i class="fab fa-github"></i>
                     </a>
                 </div>
